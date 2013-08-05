@@ -3,7 +3,7 @@ local client    = client
 local keygrabber= keygrabber
 local naughty   = require("naughty")
 local pairs     = pairs
-local theme     = require("theme")
+local beautiful = require("beautiful")
 local wibox     = require("wibox")
 
 module("hints")
@@ -18,16 +18,16 @@ end
 -- Create the wiboxes, but don't show them
 function init()
   hintsize = 60
-  local fontcolor = theme.fg_normal
+  local fontcolor = beautiful.fg_normal
   local letterbox = {}
   for i = 1, #charorder do
     local char = charorder:sub(i,i)
-    hintbox[char] = wibox({fg=theme.fg_normal, bg=theme.bg_focus, border_color=theme.border_focus, border_width=theme.border_width})
+    hintbox[char] = wibox({fg=beautiful.fg_normal, bg=beautiful.bg_focus, border_color=beautiful.border_focus, border_width=beautiful.border_width})
     hintbox[char].ontop = true
     hintbox[char].width = hintsize
     hintbox[char].height = hintsize
     letterbox[char] = wibox.widget.textbox()
-    letterbox[char]:set_markup("<span color=\"" .. theme.fg_normal .. "\"" .. ">" .. char.upper(char) .. "</span>")
+    letterbox[char]:set_markup("<span color=\"" .. beautiful.fg_normal .. "\"" .. ">" .. char.upper(char) .. "</span>")
     letterbox[char]:set_font("dejavu sans mono 40")
     letterbox[char]:set_align("center")
     hintbox[char]:set_widget(letterbox[char])
