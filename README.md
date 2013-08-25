@@ -12,7 +12,7 @@ Load hints module (in rc.lua):
 ```lua
 require("hints")
 ```
-Initialize (in rc.lua):
+Initialize (in rc.lua, must be after beautiful.init()):
 ```lua
 hints.init()
 ```
