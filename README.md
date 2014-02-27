@@ -18,8 +18,8 @@ hints.init()
 ```
 Add a keybinding to run hints.focus() (in rc.lua in globalkeys declaration):
 ```lua
-awful.key({ modkey }, "j", function () hints.focus() end),
+awful.key({ modkey }, "g", function () hints.focus() end),
 ```
 Usage
 =====
-Now, when you press modkey + j, letters will pop up on each window and you can select a window to focus by pressing the corresponding letter.
+Now, when you press modkey + g, letters will pop up on each window and you can select a window to focus by pressing the corresponding letter.
