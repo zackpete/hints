@@ -6,7 +6,7 @@ Window picker with hints for Awesome
 Installation
 ============
 
-Put hints.lua in the awesome config directory (~/.config/awesome)
+Put the directory as "hints" into the awesome config directory (~/.config/awesome).
 
 Load hints module (in rc.lua):
 ```lua
